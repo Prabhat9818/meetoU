@@ -24,7 +24,7 @@ app.use(morgan("dev"));
 
 
 // routers
-app.use("/api/v1/employee", employeeRoutes);
+app.use("/api/v1/", employeeRoutes);
 
 // listen
 app.listen(process.env.PORT, () => {
