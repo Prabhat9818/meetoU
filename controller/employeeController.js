@@ -27,7 +27,7 @@ exports.getAllEmployee=async(req,res)=>{
 
 exports.registerEmployeeController=async(req,res)=>{
     try {
-        const{employeeId,employeeName,email,img,designation,phone,location,experience}=req.body;
+        const{employeeId,employeeName,email,img,designation,phone,joinDate,location,experience}=req.body;
         // validation
         if (!employeeName || !email ){
             return res.status(400).send({
@@ -45,7 +45,7 @@ exports.registerEmployeeController=async(req,res)=>{
         }
         
         // employee save
-        const employee=new employeeModel({employeeName,email,phone,img,designation,location,experience,employeeId})
+        const employee=new employeeModel({employeeName,email,phone,img,designation,location,experience,joinDate,employeeId})
         await employee.save()
         return res.status(201).send({
             success:true,
