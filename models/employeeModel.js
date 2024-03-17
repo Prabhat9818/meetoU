@@ -10,7 +10,7 @@ const employeeSchema = new mongoose.Schema({
   experience:{type:Number},
   email: {type: String, unique: true},
   
-  joinDate:{type: Date, default: Date.now()},
+  joinDate:{type: String},
   createdDate: {type: Date, default: Date.now()},
   updateAt:{type:Date,default:Date.now}
 });
