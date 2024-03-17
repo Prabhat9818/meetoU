@@ -90,10 +90,9 @@ exports.updateEmployeeController = async (req, res) => {
 
 //Delete Blog
 exports.deleteEmployeeController = async (req, res) => {
-    const name=req.params.name;
     try{
-      const doc= await employeeModel.findOneAndDelete({"employeeName":name})
-    //   res.status(201).json(doc)
+      const doc= await employeeModel.findByIdAndDelete(req.params.id)
+    
     return res.status(200).send({
             success: true,
             message: "Employee  Deleted!",
