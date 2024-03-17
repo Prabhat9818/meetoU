@@ -45,7 +45,7 @@ exports.registerEmployeeController=async(req,res)=>{
         }
         
         // employee save
-        const employee=new employeeModel({employeeName,email,phone,img,designation,phone,location,experience,employeeId})
+        const employee=new employeeModel({employeeName,email,phone,img,designation,location,experience,employeeId})
         await employee.save()
         return res.status(201).send({
             success:true,
