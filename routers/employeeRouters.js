@@ -3,17 +3,17 @@ const express = require("express");
 const { getAllEmployee, registerEmployeeController, deleteEmployeeController, updateEmployeeController } = require("../controller/employeeController");
 
 const router=express.Router()
-// GET || all blogs
-router.get("/all-employee", getAllEmployee);
+// GET || all employee
+router.get("/employee", getAllEmployee);
 
-//POST || create blog
-router.post("/create-employee", registerEmployeeController);
+//POST || create employee
+router.post("/employee", registerEmployeeController);
 
-//PUT || update blog
-router.put("/update-employee/:id", updateEmployeeController);
+//PUT || update employee
+router.put("/employee/:id", updateEmployeeController);
 
 
-// DELETE || delete blog
-router.delete("/delete-employee/:id", deleteEmployeeController);
+// DELETE || delete employee
+router.delete("/employee/:id", deleteEmployeeController);
 
 module.exports=router
